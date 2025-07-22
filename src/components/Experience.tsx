@@ -1,5 +1,5 @@
-import { usePortfolioData } from "../queries/usePortfolioData";
-import { motion } from "framer-motion";
+import { usePortfolioData } from '../queries/usePortfolioData';
+import { motion } from 'framer-motion';
 
 function Experience() {
   const { data, isLoading } = usePortfolioData();
@@ -30,9 +30,7 @@ function Experience() {
           className="mb-6"
         >
           <h3 className="text-xl font-semibold">{exp.role}</h3>
-          <p className="text-lg">
-            {exp.company}, {exp.location}
-          </p>
+          <p className="text-lg">{exp.company}, {exp.location}</p>
           <p className="text-gray-600">{exp.duration}</p>
           <ul className="list-disc pl-5 mt-2">
             {exp.responsibilities.map((resp, idx) => (

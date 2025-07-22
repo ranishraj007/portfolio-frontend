@@ -1,5 +1,5 @@
-import { usePortfolioData } from "../queries/usePortfolioData";
-import { motion } from "framer-motion";
+import { usePortfolioData } from '../queries/usePortfolioData';
+import { motion } from 'framer-motion';
 
 function Skills() {
   const { data, isLoading } = usePortfolioData();
@@ -30,7 +30,7 @@ function Skills() {
         {data.skills.map((skill, index) => (
           <motion.span
             key={index}
-            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full"
+            className="bg-gray-800 text-white px-3 py-1 rounded-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 + index * 0.05 }}

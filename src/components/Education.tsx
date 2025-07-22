@@ -1,5 +1,5 @@
-import { usePortfolioData } from "../queries/usePortfolioData";
-import { motion } from "framer-motion";
+import { usePortfolioData } from '../queries/usePortfolioData';
+import { motion } from 'framer-motion';
 
 function Education() {
   const { data, isLoading } = usePortfolioData();
@@ -30,9 +30,7 @@ function Education() {
           className="mb-6"
         >
           <h3 className="text-xl font-semibold">{edu.degree}</h3>
-          <p className="text-lg">
-            {edu.institution}, {edu.location}
-          </p>
+          <p className="text-lg">{edu.institution}, {edu.location}</p>
           <p className="text-gray-600">{edu.duration}</p>
         </motion.div>
       ))}

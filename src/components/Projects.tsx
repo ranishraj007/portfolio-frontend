@@ -1,5 +1,5 @@
-import { usePortfolioData } from "../queries/usePortfolioData";
-import { motion } from "framer-motion";
+import { usePortfolioData } from '../queries/usePortfolioData';
+import { motion } from 'framer-motion';
 
 function Projects() {
   const { data, isLoading } = usePortfolioData();
@@ -36,7 +36,7 @@ function Projects() {
                 <motion.a
                   href={project.url}
                   target="_blank"
-                  className="text-blue-600"
+                  className="text-teal-600 hover:text-teal-500"
                   whileHover={{ scale: 1.1 }}
                 >
                   {project.name}
