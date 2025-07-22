@@ -1,5 +1,5 @@
-import { usePortfolioData } from "../queries/usePortfolioData";
-import { motion } from "framer-motion";
+import { usePortfolioData } from '../queries/usePortfolioData';
+import { motion } from 'framer-motion';
 
 interface CVModalProps {
   onClose: () => void;
@@ -70,10 +70,7 @@ function CVModal({ onClose }: CVModalProps) {
           transition={{ delay: 0.35 }}
           className="mb-2"
         >
-          <strong>GitHub:</strong>{" "}
-          <a href={data.about.github} target="_blank" className="text-blue-600">
-            {data.about.github}
-          </a>
+          <strong>GitHub:</strong> <a href={data.about.github} target="_blank" className="text-teal-600 hover:text-teal-500">{data.about.github}</a>
         </motion.p>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
@@ -81,14 +78,7 @@ function CVModal({ onClose }: CVModalProps) {
           transition={{ delay: 0.4 }}
           className="mb-4"
         >
-          <strong>LinkedIn:</strong>{" "}
-          <a
-            href={data.about.linkedin}
-            target="_blank"
-            className="text-blue-600"
-          >
-            {data.about.linkedin}
-          </a>
+          <strong>LinkedIn:</strong> <a href={data.about.linkedin} target="_blank" className="text-teal-600 hover:text-teal-500">{data.about.linkedin}</a>
         </motion.p>
         <motion.h3
           initial={{ y: 20, opacity: 0 }}
@@ -106,7 +96,7 @@ function CVModal({ onClose }: CVModalProps) {
         >
           {data.about.summary}
         </motion.p>
-
+        
         <motion.h3
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -123,12 +113,8 @@ function CVModal({ onClose }: CVModalProps) {
             transition={{ delay: 0.6 + index * 0.1 }}
             className="mb-4"
           >
-            <h4 className="text-lg font-medium">
-              {exp.role} at {exp.company}
-            </h4>
-            <p className="text-sm text-gray-600">
-              {exp.location} | {exp.duration}
-            </p>
+            <h4 className="text-lg font-medium">{exp.role} at {exp.company}</h4>
+            <p className="text-sm text-gray-600">{exp.location} | {exp.duration}</p>
             <ul className="list-disc pl-5">
               {exp.responsibilities.map((resp, idx) => (
                 <li key={idx}>{resp}</li>
@@ -154,9 +140,7 @@ function CVModal({ onClose }: CVModalProps) {
             className="mb-4"
           >
             <h4 className="text-lg font-medium">{edu.degree}</h4>
-            <p className="text-sm text-gray-600">
-              {edu.institution}, {edu.location} | {edu.duration}
-            </p>
+            <p className="text-sm text-gray-600">{edu.institution}, {edu.location} | {edu.duration}</p>
           </motion.div>
         ))}
 
@@ -178,9 +162,7 @@ function CVModal({ onClose }: CVModalProps) {
           >
             <h4 className="text-lg font-medium">
               {project.url ? (
-                <a href={project.url} target="_blank" className="text-blue-600">
-                  {project.name}
-                </a>
+                <a href={project.url} target="_blank" className="text-teal-600 hover:text-teal-500">{project.name}</a>
               ) : (
                 project.name
               )}
@@ -210,7 +192,7 @@ function CVModal({ onClose }: CVModalProps) {
           {data.skills.map((skill, index) => (
             <motion.span
               key={index}
-              className="bg-gray-200 px-3 py-1 rounded-full text-sm"
+              className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm"
               whileHover={{ scale: 1.1 }}
             >
               {skill}
@@ -235,7 +217,7 @@ function CVModal({ onClose }: CVModalProps) {
           {data.languages.map((lang, index) => (
             <motion.span
               key={index}
-              className="bg-gray-200 px-3 py-1 rounded-full text-sm"
+              className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm"
               whileHover={{ scale: 1.1 }}
             >
               {lang}
@@ -245,7 +227,7 @@ function CVModal({ onClose }: CVModalProps) {
 
         <motion.button
           onClick={onClose}
-          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="mt-4 bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-500"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

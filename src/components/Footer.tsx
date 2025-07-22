@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 function Footer() {
   return (
@@ -6,7 +6,7 @@ function Footer() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-blue-600 text-white py-4"
+      className="bg-gray-800 text-white py-4"
     >
       <div className="container mx-auto px-4 text-center">
         <p>© 2025 Ranish Shrestha. All rights reserved.</p>

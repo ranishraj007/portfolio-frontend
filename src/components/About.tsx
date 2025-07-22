@@ -1,5 +1,5 @@
-import { usePortfolioData } from "../queries/usePortfolioData";
-import { motion } from "framer-motion";
+import { usePortfolioData } from '../queries/usePortfolioData';
+import { motion } from 'framer-motion';
 
 function About() {
   const { data, isLoading } = usePortfolioData();
@@ -35,44 +35,34 @@ function About() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <p>
-            <strong>Name:</strong> {data.about.name}
-          </p>
-          <p>
-            <strong>Title:</strong> {data.about.title}
-          </p>
-          <p>
-            <strong>Address:</strong> {data.about.address}
-          </p>
+          <p><strong>Name:</strong> {data.about.name}</p>
+          <p><strong>Title:</strong> {data.about.title}</p>
+          <p><strong>Address:</strong> {data.about.address}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
         >
+          <p><strong>Contact:</strong> {data.about.contact}</p>
+          <p><strong>Email:</strong> {data.about.email}</p>
           <p>
-            <strong>Contact:</strong> {data.about.contact}
-          </p>
-          <p>
-            <strong>Email:</strong> {data.about.email}
-          </p>
-          <p>
-            <strong>GitHub:</strong>{" "}
+            <strong>GitHub:</strong>{' '}
             <motion.a
               href={data.about.github}
               target="_blank"
-              className="text-blue-600"
+              className="text-teal-600 hover:text-teal-500"
               whileHover={{ scale: 1.1 }}
             >
               {data.about.github}
             </motion.a>
           </p>
           <p>
-            <strong>LinkedIn:</strong>{" "}
+            <strong>LinkedIn:</strong>{' '}
             <motion.a
               href={data.about.linkedin}
               target="_blank"
-              className="text-blue-600"
+              className="text-teal-600 hover:text-teal-500"
               whileHover={{ scale: 1.1 }}
             >
               {data.about.linkedin}
