@@ -24,7 +24,7 @@ function Header() {
       className="bg-gray-600 text-white py-4 sticky top-0 z-10"
     >
       <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
-        <h1 className="text-2xl font-bold mb-2 sm:mb-0">Ranish Shrestha</h1>
+        <h1 className="text-2xl font-bold mb-2 sm:mb-0">Ranish Raj Shrestha</h1>
         <nav className="flex flex-wrap gap-4 items-center">
           {navLinks.map((link) => (
             <NavLink

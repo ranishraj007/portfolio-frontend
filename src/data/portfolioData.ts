@@ -190,5 +190,5 @@ export const portfolioData: PortfolioData = {
     "MapBox Studio",
     "MapBox GL JS",
   ],
-  languages: ["Nepali", "English", "Newwari", "Hindi"],
+  languages: ["Nepali", "English", "Newari", "Hindi"],
 };

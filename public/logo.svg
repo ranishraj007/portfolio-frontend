@@ -1,0 +1,10 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain Peak (Himalayan Inspiration) -->
+  <path d="M 50 80 Q 75 50 100 80 Q 125 50 150 80 L 150 100 L 50 100 Z" fill="#1A202C" />
+  <!-- Lotus Base -->
+  <path d="M 70 90 Q 85 100 100 90 Q 115 100 130 90 C 135 85 125 80 100 85 C 75 80 65 85 70 90" fill="#2B6CB0" />
+  <!-- Text: Name -->
+  <text x="50" y="40" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Ranish Raj Shrestha</text>
+  <!-- Text: Title -->
+  <text x="50" y="60" font-family="Inter, sans-serif" font-size="12" fill="#2B6CB0">Frontend Developer</text>
+</svg>
