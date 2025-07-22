@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+    color: #1a202c; /* Dark navy for body text */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #171923; /* Darker navy for headings */
+  }
+
+  a {
+    color: white; /* Teal for links */
+  }
+
+  a:hover {
+    color: goldenrod; /* Lighter teal on hover */
+  }
+}
