@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CVModal from "../components/CVModal";
 import SceneCanvas from "../components/SceneCanvas";
+import Skills from "../components/Skills";
 import { usePortfolioData } from "../queries/usePortfolioData";
 
 const fadeUp = {
@@ -329,33 +330,10 @@ function Home() {
         </section>
 
         <section id="skills" className="py-24">
-          <div className="mx-auto grid w-[min(1180px,calc(100%-1.5rem))] gap-6 lg:grid-cols-[1fr_0.9fr]">
-            <motion.div
-              {...fadeUp}
-              className="rounded-[2rem] border border-white/10 bg-white/6 p-8 backdrop-blur-xl"
-            >
-              <p className="section-kicker">Skills</p>
-              <h2 className="section-title">
-                Tools I use to move from idea to launch.
-              </h2>
-              <div className="mt-8 flex flex-wrap gap-3">
-                {data.skills.map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.02 }}
-                    whileHover={{ y: -4, scale: 1.05 }}
-                    className="rounded-full border border-white/10 bg-slate-950/55 px-4 py-2 text-sm text-slate-200"
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
+          <div className="mx-auto w-[min(1180px,calc(100%-1.5rem))]">
+            <Skills />
 
-            <motion.div {...fadeUp} className="grid gap-6">
+            <motion.div {...fadeUp} className="grid gap-6 lg:grid-cols-2">
               <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-orange-400/12 to-white/6 p-8">
                 <p className="section-kicker">Education</p>
                 <div className="mt-6 space-y-4">

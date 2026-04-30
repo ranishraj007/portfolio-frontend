@@ -3,7 +3,7 @@ import { portfolioData, type PortfolioData } from '../data/portfolioData';
 
 const fetchPortfolioData = async (): Promise<PortfolioData> => {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(portfolioData), 500);
+    resolve(portfolioData)
   });
 };
 
