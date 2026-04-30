@@ -18,6 +18,7 @@
     "framer-motion": "^12.23.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-helmet-async": "^3.0.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^7.7.0",
     "tailwindcss": "^4.1.11",
