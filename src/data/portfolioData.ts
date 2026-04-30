@@ -166,6 +166,7 @@ export const portfolioData: PortfolioData = {
     "React.js",
     "Next.js",
     "Redux",
+    "remix.js",
     "three.js",
     "Redux Toolkit",
     "React Query (TanStack Query)",
