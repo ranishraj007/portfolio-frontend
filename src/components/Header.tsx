@@ -21,7 +21,7 @@ function Header({ onOpenCv }: HeaderProps) {
       className="fixed inset-x-0 top-0 z-30"
     >
       <div className="mx-auto mt-4 flex w-[min(1180px,calc(100%-1.5rem))] items-center justify-between rounded-full border border-white/12 bg-slate-950/65 px-4 py-3 shadow-[0_10px_60px_rgba(15,23,42,0.45)] backdrop-blur-xl">
-        <a href="#top" className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
+        <a href="#top" className="text-lg font-semibold uppercase tracking-[0.35em] text-white">
           Ranish
         </a>
         <nav className="hidden items-center gap-2 md:flex">

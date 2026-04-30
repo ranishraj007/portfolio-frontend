@@ -39,7 +39,7 @@ export const portfolioData: PortfolioData = {
     contact: "9840800899",
     email: "ranish.raj.shrestha@gmail.com",
     github: "https://github.com/ranishraj007",
-    linkedin: "https://www.linkedin.com/in/ranish-raj-shrestha-89aa33207/",
+    linkedin: "https://www.linkedin.com/in/ranish-raj-shrestha-89aa32207/",
     summary:
       "Highly motivated and detail-oriented developer with a solid foundation in front-end technologies and a growing proficiency in React. Possess a diverse skill set ranging from traditional programming languages to modern web development frameworks. Skilled in designing and developing CSS and SASS components, complemented by practical knowledge in database tools and queries. Eager to contribute to a dynamic development team and advance in the field of React development.",
   },
@@ -97,66 +97,107 @@ export const portfolioData: PortfolioData = {
     },
   ],
   projects: [
-    {
-      name: "National Platform for Disaster Risk Reduction (NPDRR)",
-      description: [
-        "Built reusable React components using Tailwind CSS and Redux Toolkit.",
-        "Integrated APIs for dynamic content and created fully responsive pages with optimized layout.",
-        "Collaborated closely with team members to ensure smooth workflow and consistency in design and development.",
-        "Focused on modular code, reusability, and accessibility.",
-      ],
-      url: "https://google.com",
-    },
-    {
-      name: "HEAT AI",
-      description: [
-        "Worked with a team to build multilingual, responsive, and interactive pages using React, Tailwind CSS, Redux Toolkit, and Mapbox integration.",
-        "Implemented custom hooks for language switching and location rendering.",
-        "Integrated APIs for dynamic data rendering and ensured accessibility across multiple devices.",
-        "Focused on performance optimization and clean component structure.",
-      ],
-      url: "https://heatai.org/",
-    },
-    {
-      name: "Youth Innovation Lab (Yi Lab) Frontend Development",
-      description: [
-        "Developed user-friendly, API-integrated interfaces using React, Tailwind CSS, and React Query for state and data management.",
-        "Built reusable components, handled dynamic routing with React Router, and ensured responsiveness across devices.",
-        "Collaborated with UI/UX team, performed extensive testing and debugging to ensure stability and scalability.",
-      ],
-      url: "https://youthinnovationlab.org/",
-    },
-    {
-      name: "Shikshya",
-      description: [
-        "Contributed to frontend development using React, focusing on testing, debugging, and fixing bugs to improve platform stability and user experience.",
-      ],
-      url: "https://shikshya.org/",
-    },
-    {
-      name: "Creators Mela",
-      description: [
-        "Built responsive and visually appealing event pages using React and Tailwind CSS, with an emphasis on performance optimization and smooth user navigation.",
-      ],
-      url: "https://usembassynepal.events/",
-    },
-    {
-      name: "United States Youth Council (USYC)",
-      description: [
-        "Collaborated on building an interactive, mobile-friendly website using React and Tailwind CSS, with a focus on clean layout design, responsive UI components, and optimized performance.",
-      ],
-      url: "https://www.usycn.org/",
-    },
-    {
-      name: "NDRRMA (National Disaster Risk Reduction & Management Authority)",
-      description: [
-        "Reviewed and maintained the existing React-based codebase to ensure stability and performance.",
-        "Debugged critical issues, improved UI consistency, and implemented new features to enhance user experience and functionality.",
-        "Collaborated with the team to ensure the application met government standards and was optimized for cross-device compatibility.",
-      ],
-      url: "https://ndrrma.gov.np",
-    },
-  ],
+  {
+    name: "Bipad Portal",
+    description: [
+      "Refactored legacy class-based components into modern functional components using React Hooks.",
+      "Optimized data-heavy dashboards and improved rendering performance for large datasets.",
+      "Implemented geospatial data visualizations and enhanced UI for disaster monitoring systems.",
+      "Focused on performance, scalability, and maintainability for a national-level platform."
+    ],
+    url: "https://bipadportal.gov.np/"
+  },
+  {
+    name: "National Platform for Disaster Risk Reduction (NPDRR)",
+    description: [
+      "Built reusable React components using Tailwind CSS and Redux Toolkit.",
+      "Integrated APIs for dynamic content and developed fully responsive pages.",
+      "Ensured modular code structure, accessibility, and consistency across the platform.",
+      "Collaborated with team members to maintain design and development standards."
+    ],
+    url: "https://npdrr.bipad.gov.np/"
+  },
+  {
+    name: "NDRRMA (National Disaster Risk Reduction & Management Authority)",
+    description: [
+      "Maintained and improved an existing React-based application for stability and performance.",
+      "Debugged critical issues and enhanced UI consistency across modules.",
+      "Implemented new features to improve usability and system functionality.",
+      "Ensured cross-device compatibility and compliance with government standards."
+    ],
+    url: "https://ndrrma.gov.np/np"
+  },
+  {
+    name: "HEAT AI",
+    description: [
+      "Developed multilingual and responsive interfaces using React, Tailwind CSS, and Redux Toolkit.",
+      "Integrated Mapbox for geospatial visualization and built custom hooks for dynamic rendering.",
+      "Handled API integration for dynamic data and real-time updates.",
+      "Focused on performance optimization and clean, scalable component architecture."
+    ],
+    url: "https://heatai.org/"
+  },
+  {
+    name: "United States Youth Council (USYC)",
+    description: [
+      "Developed a responsive and mobile-friendly website using React and Tailwind CSS.",
+      "Built reusable UI components with a focus on clean and maintainable design.",
+      "Optimized performance for faster load times and smoother user experience.",
+      "Ensured cross-browser compatibility and accessibility."
+    ],
+    url: "https://www.usycn.org/"
+  },
+  {
+    name: "Creators Mela",
+    description: [
+      "Built responsive and visually engaging event pages using React and Tailwind CSS.",
+      "Improved performance and optimized assets for faster loading.",
+      "Enhanced navigation and user experience across devices.",
+      "Maintained consistent UI design aligned with event branding."
+    ],
+    url: "https://usembassynepal.events/"
+  },
+  {
+    name: "Tag Me",
+    description: [
+      "Developed interactive UI modules and handled complex form-based data collection.",
+      "Built reusable components using React and Tailwind CSS for consistent UI.",
+      "Integrated APIs for crowdsourced data submission and management.",
+      "Focused on usability, validation, and smooth user interaction."
+    ],
+    url: "https://tagme.yilab.org.np/"
+  },
+  {
+    name: "Youth Innovation Lab (Yi Lab)",
+    description: [
+      "Established frontend architecture and coding best practices for multiple projects.",
+      "Built and maintained the organization’s main website using React.",
+      "Improved performance, SEO, and accessibility for global users.",
+      "Collaborated with cross-functional teams to ensure scalability and consistency."
+    ],
+    url: "https://youthinnovationlab.org/"
+  },
+  {
+    name: "Shikshya",
+    description: [
+      "Contributed to frontend development using React with a focus on debugging and testing.",
+      "Fixed UI bugs and improved overall platform stability.",
+      "Enhanced user experience through small but impactful UI improvements.",
+      "Worked closely with the team to ensure consistent behavior across features."
+    ],
+    url: "https://shikshya.org/"
+  },
+  {
+    name: "Risk AI",
+    description: [
+      "Developed frontend interfaces for an AI-based risk analysis platform.",
+      "Integrated APIs to enable real-time chat functionality for disaster risk insights.",
+      "Implemented responsive UI and modern styling using React and Tailwind CSS.",
+      "Focused on performance, usability, and clean component structure."
+    ],
+    url: "https://riskgent.com/"
+  }
+],
   skills: [
     "HTML",
     "CSS",

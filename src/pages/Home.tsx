@@ -34,6 +34,8 @@ function Home() {
     );
   }
 
+  // console.log("data", data.about.linkedin);
+
   return (
     <div id="top" className="bg-slate-950 text-slate-50">
       <Header onOpenCv={() => setIsCvOpen(true)} />
@@ -51,7 +53,7 @@ function Home() {
               className="max-w-4xl"
             >
               <p className="mb-5 text-xs uppercase tracking-[0.45em] text-cyan-300">
-                Frontend Developer • React Engineer • Kathmandu
+                Frontend Engineer • React Developer • Computer Engineer
               </p>
               <h1 className="max-w-4xl text-5xl font-semibold leading-tight text-white md:text-7xl">
                 {data.about.name}
@@ -65,7 +67,11 @@ function Home() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <motion.a
                   href="#projects"
-                  whileHover={{ y: -4, scale: 1.02, boxShadow: "0 18px 50px rgba(14,165,233,0.35)" }}
+                  whileHover={{
+                    y: -4,
+                    scale: 1.02,
+                    boxShadow: "0 18px 50px rgba(14,165,233,0.35)",
+                  }}
                   whileTap={{ scale: 0.98 }}
                   className={`${primaryButton} bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 text-slate-950`}
                 >
@@ -96,18 +102,35 @@ function Home() {
             <motion.div
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              transition={{
+                duration: 0.9,
+                delay: 0.25,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               className="mt-16 grid gap-4 md:grid-cols-4"
             >
               {[
-                { label: "Current Role", value: data.experience[0]?.role ?? data.about.title },
-                { label: "Experience", value: `${data.experience.length}+ roles` },
+                {
+                  label: "Current Role",
+                  value: data.experience[0]?.role ?? data.about.title,
+                },
+                {
+                  label: "Experience",
+                  value: `${data.experience.length}+ roles`,
+                },
                 { label: "Projects", value: `${data.projects.length} shipped` },
                 { label: "Core Stack", value: "React • Tailwind • APIs" },
               ].map((item) => (
-                <div key={item.label} className="rounded-[1.75rem] border border-white/10 bg-white/6 p-5 backdrop-blur-xl">
-                  <p className="text-xs uppercase tracking-[0.3em] text-slate-400">{item.label}</p>
-                  <p className="mt-3 text-lg font-semibold text-white">{item.value}</p>
+                <div
+                  key={item.label}
+                  className="rounded-[1.75rem] border border-white/10 bg-white/6 p-5 backdrop-blur-xl"
+                >
+                  <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                    {item.label}
+                  </p>
+                  <p className="mt-3 text-lg font-semibold text-white">
+                    {item.value}
+                  </p>
                 </div>
               ))}
             </motion.div>
@@ -116,13 +139,20 @@ function Home() {
 
         <section id="about" className="relative py-24">
           <div className="mx-auto grid w-[min(1180px,calc(100%-1.5rem))] gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-            <motion.div {...fadeUp} className="rounded-[2rem] border border-white/10 bg-white/6 p-8 backdrop-blur-xl">
+            <motion.div
+              {...fadeUp}
+              className="rounded-[2rem] border border-white/10 bg-white/6 p-8 backdrop-blur-xl"
+            >
               <p className="section-kicker">About</p>
-              <h2 className="section-title">A builder who cares about clarity, speed, and polished interactions.</h2>
+              <h2 className="section-title">
+                A builder who cares about clarity, speed, and polished
+                interactions.
+              </h2>
               <p className="mt-6 text-base leading-8 text-slate-300">
-                I work across product UI, component architecture, API integrations, and responsive frontend systems.
-                My background in computer engineering helps me stay technical, while my product mindset keeps the
-                interface intuitive and human.
+                I work across product UI, component architecture, API
+                integrations, and responsive frontend systems. My background in
+                computer engineering helps me stay technical, while my product
+                mindset keeps the interface intuitive and human.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="info-card">
@@ -131,13 +161,19 @@ function Home() {
                 </div>
                 <div className="info-card">
                   <p className="info-label">Email</p>
-                  <a href={`mailto:${data.about.email}`} className="info-value hover:text-cyan-300">
+                  <a
+                    href={`mailto:${data.about.email}`}
+                    className="info-value hover:text-cyan-300"
+                  >
                     {data.about.email}
                   </a>
                 </div>
                 <div className="info-card">
                   <p className="info-label">Phone</p>
-                  <a href={`tel:${data.about.contact}`} className="info-value hover:text-cyan-300">
+                  <a
+                    href={`tel:${data.about.contact}`}
+                    className="info-value hover:text-cyan-300"
+                  >
                     {data.about.contact}
                   </a>
                 </div>
@@ -148,13 +184,26 @@ function Home() {
               </div>
             </motion.div>
 
-            <motion.div {...fadeUp} className="rounded-[2rem] border border-cyan-400/18 bg-gradient-to-b from-cyan-400/10 to-white/5 p-8">
+            <motion.div
+              {...fadeUp}
+              className="rounded-[2rem] border border-cyan-400/18 bg-gradient-to-b from-cyan-400/10 to-white/5 p-8"
+            >
               <p className="section-kicker">Links</p>
-              <h3 className="text-2xl font-semibold text-white">Find me where the work happens.</h3>
+              <h3 className="text-2xl font-semibold text-white">
+                Find me where the work happens.
+              </h3>
               <div className="mt-8 flex flex-col gap-4">
                 {[
-                  { href: data.about.github, label: "GitHub", value: "Code, repos, side projects" },
-                  { href: data.about.linkedin, label: "LinkedIn", value: "Professional profile and network" },
+                  {
+                    href: data.about.github,
+                    label: "GitHub",
+                    value: "Code, repos, side projects",
+                  },
+                  {
+                    href: data.about.linkedin,
+                    label: "LinkedIn",
+                    value: "Professional profile and network",
+                  },
                 ].map((item) => (
                   <motion.a
                     key={item.label}
@@ -165,8 +214,12 @@ function Home() {
                     whileTap={{ scale: 0.99 }}
                     className="rounded-[1.5rem] border border-white/10 bg-slate-950/40 p-5"
                   >
-                    <p className="text-xs uppercase tracking-[0.32em] text-slate-400">{item.label}</p>
-                    <p className="mt-2 text-lg font-semibold text-white">{item.value}</p>
+                    <p className="text-xs uppercase tracking-[0.32em] text-slate-400">
+                      {item.label}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-white">
+                      {item.value}
+                    </p>
                     <p className="mt-2 text-sm text-cyan-300">{item.href}</p>
                   </motion.a>
                 ))}
@@ -179,7 +232,10 @@ function Home() {
           <div className="mx-auto w-[min(1180px,calc(100%-1.5rem))]">
             <motion.div {...fadeUp} className="mb-10">
               <p className="section-kicker">Experience</p>
-              <h2 className="section-title">A timeline shaped by product work, shipped interfaces, and constant learning.</h2>
+              <h2 className="section-title">
+                A timeline shaped by product work, shipped interfaces, and
+                constant learning.
+              </h2>
             </motion.div>
             <div className="space-y-6">
               {data.experience.map((item, index) => (
@@ -190,8 +246,12 @@ function Home() {
                   className="grid gap-5 rounded-[2rem] border border-white/10 bg-white/6 p-6 backdrop-blur-xl lg:grid-cols-[240px_1fr]"
                 >
                   <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-cyan-300">{item.duration}</p>
-                    <h3 className="mt-3 text-2xl font-semibold text-white">{item.role}</h3>
+                    <p className="text-xs uppercase tracking-[0.3em] text-cyan-300">
+                      {item.duration}
+                    </p>
+                    <h3 className="mt-3 text-2xl font-semibold text-white">
+                      {item.role}
+                    </h3>
                     <p className="mt-2 text-slate-400">{item.company}</p>
                     <p className="text-sm text-slate-500">{item.location}</p>
                   </div>
@@ -216,7 +276,10 @@ function Home() {
           <div className="mx-auto w-[min(1180px,calc(100%-1.5rem))]">
             <motion.div {...fadeUp} className="mb-10">
               <p className="section-kicker">Projects</p>
-              <h2 className="section-title">Selected work across public platforms, civic products, and fast-moving frontend builds.</h2>
+              <h2 className="section-title">
+                Selected work across public platforms, civic products, and
+                fast-moving frontend builds.
+              </h2>
             </motion.div>
             <div className="grid gap-6 lg:grid-cols-2">
               {data.projects.map((project, index) => (
@@ -229,8 +292,12 @@ function Home() {
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.32em] text-slate-400">Project {String(index + 1).padStart(2, "0")}</p>
-                      <h3 className="mt-3 text-2xl font-semibold text-white">{project.name}</h3>
+                      <p className="text-xs uppercase tracking-[0.32em] text-slate-400">
+                        Project {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h3 className="mt-3 text-2xl font-semibold text-white">
+                        {project.name}
+                      </h3>
                     </div>
                     {project.url ? (
                       <motion.a
@@ -247,7 +314,10 @@ function Home() {
                   </div>
                   <div className="mt-6 grid gap-3">
                     {project.description.map((point) => (
-                      <div key={point} className="rounded-[1.2rem] border border-white/8 bg-slate-950/38 px-4 py-4 text-sm leading-7 text-slate-300">
+                      <div
+                        key={point}
+                        className="rounded-[1.2rem] border border-white/8 bg-slate-950/38 px-4 py-4 text-sm leading-7 text-slate-300"
+                      >
                         {point}
                       </div>
                     ))}
@@ -260,9 +330,14 @@ function Home() {
 
         <section id="skills" className="py-24">
           <div className="mx-auto grid w-[min(1180px,calc(100%-1.5rem))] gap-6 lg:grid-cols-[1fr_0.9fr]">
-            <motion.div {...fadeUp} className="rounded-[2rem] border border-white/10 bg-white/6 p-8 backdrop-blur-xl">
+            <motion.div
+              {...fadeUp}
+              className="rounded-[2rem] border border-white/10 bg-white/6 p-8 backdrop-blur-xl"
+            >
               <p className="section-kicker">Skills</p>
-              <h2 className="section-title">Tools I use to move from idea to launch.</h2>
+              <h2 className="section-title">
+                Tools I use to move from idea to launch.
+              </h2>
               <div className="mt-8 flex flex-wrap gap-3">
                 {data.skills.map((skill, index) => (
                   <motion.span
@@ -285,10 +360,17 @@ function Home() {
                 <p className="section-kicker">Education</p>
                 <div className="mt-6 space-y-4">
                   {data.education.map((item) => (
-                    <div key={`${item.institution}-${item.degree}`} className="rounded-[1.25rem] border border-white/10 bg-slate-950/35 p-4">
-                      <h3 className="text-lg font-semibold text-white">{item.degree}</h3>
+                    <div
+                      key={`${item.institution}-${item.degree}`}
+                      className="rounded-[1.25rem] border border-white/10 bg-slate-950/35 p-4"
+                    >
+                      <h3 className="text-lg font-semibold text-white">
+                        {item.degree}
+                      </h3>
                       <p className="mt-1 text-slate-300">{item.institution}</p>
-                      <p className="text-sm text-slate-500">{item.location} • {item.duration}</p>
+                      <p className="text-sm text-slate-500">
+                        {item.location} • {item.duration}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -319,7 +401,8 @@ function Home() {
             >
               <p className="section-kicker text-cyan-200">Let&apos;s Build</p>
               <h2 className="max-w-3xl text-3xl font-semibold leading-tight text-white md:text-5xl">
-                If you need a frontend developer who cares about feel as much as function, let&apos;s talk.
+                If you need a frontend developer who cares about feel as much as
+                function, let&apos;s talk.
               </h2>
               <div className="mt-8 flex flex-wrap gap-4">
                 <motion.a
@@ -331,7 +414,7 @@ function Home() {
                   Email Me
                 </motion.a>
                 <motion.a
-                  href={data.about.linkedin}
+                  href="https://www.linkedin.com/in/ranish-raj-shrestha-89aa32207/"
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ y: -4, scale: 1.02 }}
