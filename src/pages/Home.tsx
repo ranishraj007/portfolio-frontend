@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, type PointerEvent } from "react";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CVModal from "../components/CVModal";
-import SceneCanvas from "../components/SceneCanvas";
 import Skills from "../components/Skills";
+import SiteAtmosphere from "../components/SiteAtmosphere";
 import { usePortfolioData } from "../queries/usePortfolioData";
 
 const fadeUp = {
@@ -16,6 +16,12 @@ const fadeUp = {
 
 const primaryButton =
   "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-shadow";
+
+const handleSectionPointerMove = (event: PointerEvent<HTMLElement>) => {
+  const rect = event.currentTarget.getBoundingClientRect();
+  event.currentTarget.style.setProperty("--section-pointer-x", `${event.clientX - rect.left}px`);
+  event.currentTarget.style.setProperty("--section-pointer-y", `${event.clientY - rect.top}px`);
+};
 
 function Home() {
   const [isCvOpen, setIsCvOpen] = useState(false);
@@ -43,8 +49,8 @@ function Home() {
       <CVModal isOpen={isCvOpen} onClose={() => setIsCvOpen(false)} />
 
       <main className="relative overflow-hidden">
-        <section className="relative min-h-screen">
-          <SceneCanvas />
+        <SiteAtmosphere />
+        <section className="section-glow relative min-h-screen" onPointerMove={handleSectionPointerMove}>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.25),_transparent_30%),radial-gradient(circle_at_80%_20%,_rgba(249,115,22,0.22),_transparent_24%),linear-gradient(180deg,_rgba(2,6,23,0.5),_rgba(2,6,23,0.98))]" />
           <div className="relative mx-auto flex min-h-screen w-[min(1180px,calc(100%-1.5rem))] flex-col justify-center py-32">
             <motion.div
@@ -138,7 +144,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="about" className="relative py-24">
+        <section id="about" className="section-glow relative py-24" onPointerMove={handleSectionPointerMove}>
           <div className="mx-auto grid w-[min(1180px,calc(100%-1.5rem))] gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <motion.div
               {...fadeUp}
@@ -229,7 +235,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="experience" className="py-24">
+        <section id="experience" className="section-glow relative py-24" onPointerMove={handleSectionPointerMove}>
           <div className="mx-auto w-[min(1180px,calc(100%-1.5rem))]">
             <motion.div {...fadeUp} className="mb-10">
               <p className="section-kicker">Experience</p>
@@ -273,7 +279,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="projects" className="py-24">
+        <section id="projects" className="section-glow relative py-24" onPointerMove={handleSectionPointerMove}>
           <div className="mx-auto w-[min(1180px,calc(100%-1.5rem))]">
             <motion.div {...fadeUp} className="mb-10">
               <p className="section-kicker">Projects</p>
@@ -329,7 +335,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="skills" className="py-24">
+        <section id="skills" className="section-glow relative py-24" onPointerMove={handleSectionPointerMove}>
           <div className="mx-auto w-[min(1180px,calc(100%-1.5rem))]">
             <Skills />
 
@@ -371,7 +377,7 @@ function Home() {
           </div>
         </section>
 
-        <section id="contact" className="pb-24 pt-10">
+        <section id="contact" className="section-glow relative pb-24 pt-10" onPointerMove={handleSectionPointerMove}>
           <div className="mx-auto w-[min(1180px,calc(100%-1.5rem))]">
             <motion.div
               {...fadeUp}

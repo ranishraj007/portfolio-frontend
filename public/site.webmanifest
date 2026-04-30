@@ -1,0 +1,16 @@
+{
+  "name": "Ranish Raj Shrestha Portfolio",
+  "short_name": "Ranish",
+  "description": "Frontend developer portfolio for Ranish Raj Shrestha.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

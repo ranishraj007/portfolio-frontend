@@ -317,7 +317,7 @@ function Skills() {
               transition={{ delay: 0.15 }}
               className="mb-4 text-xs font-bold uppercase tracking-[0.34em] text-cyan-200"
             >
-              Interactive Skill Matrix
+              Skills
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, x: -50 }}
