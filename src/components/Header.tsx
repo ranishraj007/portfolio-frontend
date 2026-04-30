@@ -1,69 +1,52 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import CVModal from "./CVModal";
 
-function Header() {
-  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
+const navItems = [
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
+];
 
-  const navLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/experience", label: "Experience" },
-    { to: "/education", label: "Education" },
-    { to: "/projects", label: "Projects" },
-    { to: "/skills", label: "Skills" },
-    { to: "/languages", label: "Languages" },
-  ];
+interface HeaderProps {
+  onOpenCv: () => void;
+}
 
+function Header({ onOpenCv }: HeaderProps) {
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-gray-600 text-white py-4 sticky top-0 z-10"
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed inset-x-0 top-0 z-30"
     >
-      <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
-        <h1 className="text-2xl font-bold mb-2 sm:mb-0">Ranish Raj Shrestha</h1>
-        <nav className="flex flex-wrap gap-4 items-center">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) =>
-                `px-3 py-1 rounded ${
-                  isActive ? "bg-blue-800" : "hover:bg-blue-500"
-                }`
-              }
+      <div className="mx-auto mt-4 flex w-[min(1180px,calc(100%-1.5rem))] items-center justify-between rounded-full border border-white/12 bg-slate-950/65 px-4 py-3 shadow-[0_10px_60px_rgba(15,23,42,0.45)] backdrop-blur-xl">
+        <a href="#top" className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
+          Ranish
+        </a>
+        <nav className="hidden items-center gap-2 md:flex">
+          {navItems.map((item) => (
+            <motion.a
+              key={item.href}
+              href={item.href}
+              whileHover={{ y: -2, scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="rounded-full px-4 py-2 text-sm text-slate-200 transition-colors hover:bg-white/10 hover:text-white"
             >
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {link.label}
-              </motion.div>
-            </NavLink>
+              {item.label}
+            </motion.a>
           ))}
-          <motion.a
-            href="/assets/ranish-shrestha-cv.pdf"
-            download
-            className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Download CV
-          </motion.a>
-          <motion.button
-            onClick={() => setIsCVModalOpen(true)}
-            className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View CV
-          </motion.button>
         </nav>
+        <motion.button
+          type="button"
+          onClick={onOpenCv}
+          whileHover={{ y: -2, scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
+          className="rounded-full bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 px-5 py-2 text-sm font-semibold text-slate-950 shadow-[0_10px_30px_rgba(14,165,233,0.35)]"
+        >
+          View CV
+        </motion.button>
       </div>
-      {isCVModalOpen && <CVModal onClose={() => setIsCVModalOpen(false)} />}
     </motion.header>
   );
 }

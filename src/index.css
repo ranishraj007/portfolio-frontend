@@ -1,25 +1,84 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+:root {
+  color-scheme: dark;
+}
 
-@layer base {
-  html {
-    font-family: "Inter", sans-serif;
-    color: #1a202c; /* Dark navy for body text */
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: #171923; /* Darker navy for headings */
-  }
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.22), transparent 22%),
+    radial-gradient(circle at 85% 15%, rgba(249, 115, 22, 0.14), transparent 18%),
+    #020617;
+  color: #e2e8f0;
+  font-family: "Manrope", sans-serif;
+}
 
-  a {
-    color: white; /* Teal for links */
-  }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-  a:hover {
-    color: goldenrod; /* Lighter teal on hover */
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.section-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #67e8f9;
+}
+
+.section-title {
+  margin-top: 0.75rem;
+  max-width: 52rem;
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  line-height: 1.05;
+  color: white;
+}
+
+.info-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(2, 6, 23, 0.45);
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+
+.info-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #94a3b8;
+}
+
+.info-value {
+  margin-top: 0.6rem;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  word-break: break-word;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: white;
 }
