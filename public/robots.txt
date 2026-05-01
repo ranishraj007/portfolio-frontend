@@ -3,4 +3,4 @@ Allow: /
 Disallow: /assets/
 Disallow: /*.map$
 
-Sitemap: https://ranishrajshrestha.com/sitemap.xml
+Sitemap: https://ranishrajshrestha.com.np/sitemap.xml
